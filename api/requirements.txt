@@ -14,10 +14,12 @@ pickle5==0.0.11
 pip==21.0.1
 
 pytz==2021.1
-scipy==1.5.2
+scipy==1.6.0
 setuptools==52.0.0
 six==1.16.0
 statsmodels==0.12.0
 Werkzeug==1.0.1
 wheel==0.37.0
 wincertstore==0.2
+
+scikit-learn==0.24.0

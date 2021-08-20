@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.9
 
 #update
 RUN apt-get update
@@ -12,5 +12,5 @@ RUN pip3 install -r requirements.txt
 COPY . /api
 WORKDIR /api
 
-CMD python unit_test.py
+
 

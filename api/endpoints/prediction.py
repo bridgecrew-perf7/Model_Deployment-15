@@ -1,7 +1,7 @@
 import pandas as pd
 from flask import request, jsonify, Blueprint
 import pickle
-
+from data_prep import prep_data
 # Create Flask Blueprint
 prediction_api = Blueprint('prediction_api', __name__)
 
@@ -12,8 +12,11 @@ model = pickle.load(open('model/model.pkl', 'rb'))
 
 @prediction_api.route('/predict', methods=['POST'])
 def predict():
+
     # Request json data
     data = pd.DataFrame(request.json)
+
+    data = prep_data(data)
 
     # Check that number of variables is 25
     if data.shape[1] == 25:
