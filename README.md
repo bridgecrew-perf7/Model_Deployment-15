@@ -8,6 +8,7 @@ In this project, we used Flask to create our API, and Docker to package it:
 
 ## Project structure
 
+```
 root
     |- docker-compose.yml
     |- run_api.sh
@@ -30,6 +31,7 @@ root
         |- test
             |- __init__.py
             |- test_prediction.py
+```
 
 ## root
 Houses the following files:
